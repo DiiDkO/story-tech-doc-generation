@@ -2,6 +2,8 @@ import ExcelJS from "exceljs";
 import { saveAs } from "file-saver";
 
 export const generateXLSXFile = async (techDocDataObj) => {
+  console.log('DB Test:')
+  console.log(techDocDataObj)
   const testCaseData = techDocDataObj.testCaseData || {
     storyNumber: "",
     shortDescription: "",
@@ -14,7 +16,7 @@ export const generateXLSXFile = async (techDocDataObj) => {
   const cellTextColor = "FFFFFFFF";
 
   const workbook = new ExcelJS.Workbook();
-
+  debugger;
   //1. How to Use This Document Sheet
   const sheet1 = workbook.addWorksheet("How to Use This Document");
   sheet1.getCell("A1").value =
